@@ -8,19 +8,15 @@ import Avatar from '@mui/material/Avatar';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import LinkIcon from '@mui/icons-material/Link';
 import Link from '@mui/material/Link';
 import Chip from '@mui/material/Chip';
 import { useThemeContext } from '../contexts/ThemeContext';
 import Divider from '@mui/material/Divider';
 import VerifiedIcon from '@mui/icons-material/Verified';
+// Import the content object
+import { homeContent } from '../content/homeContent';
 
 function HomePage() {
-  // Fallback to initials if image doesn't load
-  const avatarLetters = 'DS';
-  // Reference image from public directory
-  const profileImagePath = '/santosh.png';
-  
   // Get current theme mode
   const { mode } = useThemeContext();
 
@@ -48,8 +44,8 @@ function HomePage() {
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={4} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
               <Avatar
-                src={profileImagePath}
-                alt="Dr. Santosh Kumar S"
+                src={homeContent.profile.profileImagePath}
+                alt={homeContent.profile.name}
                 sx={{
                   bgcolor: 'primary.main',
                   width: 180,
@@ -64,7 +60,7 @@ function HomePage() {
                     : '0 4px 20px rgba(38,132,255,0.2)', // Subtle blue glow in dark mode
                 }}
               >
-                {avatarLetters}
+                {homeContent.profile.avatarLetters}
               </Avatar>
             </Grid>
             <Grid item xs={12} md={8}>
@@ -77,7 +73,7 @@ function HomePage() {
                   fontSize: { xs: '2rem', md: '2.5rem' } 
                 }}
               >
-                Dr. Santosh Kumar S
+                {homeContent.profile.name}
               </Typography>
               <Typography 
                 variant="h5" 
@@ -86,19 +82,18 @@ function HomePage() {
                 gutterBottom
                 sx={{ mb: 2 }}
               >
-                BDS, MBA, FIII.
+                {homeContent.profile.title}
               </Typography>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                 <LocationOnIcon color="primary" sx={{ mr: 1 }} />
                 <Typography variant="body1" color="text.secondary">
-                  Chennai, Tamil Nadu, India
+                  {homeContent.profile.location}
                 </Typography>
               </Box>
               <Box sx={{ mt: 3, display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                <Chip label="Health Insurance" color="primary" size="small" />
-                <Chip label="Healthcare Management" color="primary" size="small" />
-                <Chip label="Dentistry" color="primary" size="small" />
-                <Chip label="Fraud Mitigation" color="primary" size="small" />
+                {homeContent.profile.tags.map((tag) => (
+                  <Chip key={tag} label={tag} color="primary" size="small" />
+                ))}
               </Box>
             </Grid>
           </Grid>
@@ -126,67 +121,33 @@ function HomePage() {
               alignItems: 'center',
             }}
           >
-            Executive Summary
+            {homeContent.summary.title}
           </Typography>
           <Divider sx={{ mb: 3 }} />
-          <Typography 
-            variant="body1" 
-            paragraph
-            sx={{ lineHeight: 1.7 }}
-          >
-            Accomplished healthcare executive with dual expertise in dental practice and insurance administration. MBA graduate from <strong>Birla Institute of Technology and Science, Pilani</strong> specialized in health systems strategic management with over 10+ years of progressive experience spanning clinical practice, medical administration, and insurance operations.
-          </Typography>
+          {homeContent.summary.paragraphs.map((paragraph, index) => (
+             <Typography 
+              key={index}
+              variant="body1" 
+              paragraph
+              sx={{ lineHeight: 1.7 }}
+              dangerouslySetInnerHTML={{ __html: paragraph }} // Use dangerouslySetInnerHTML for HTML tags like <strong>
+            />
+          ))}
 
           <Typography 
             variant="body1" 
             sx={{ mb: 2, fontWeight: 500 }}
           >
-            Key Achievements:
+            {homeContent.summary.keyAchievementsTitle}
           </Typography>
 
-          <Box sx={achievementStyle}>
-            <VerifiedIcon color="primary" sx={{ mr: 1.5, mt: 0.3, fontSize: '1rem' }} />
-            <Typography variant="body1">
-              At <strong>Cholamandalam MS General Insurance</strong>, implemented AI-based fraud detection system that reduced fraudulent claims by 28% and saved approximately ₹3.4 crore ($410,000 USD / £325,000) annually.
-            </Typography>
-          </Box>
+          {homeContent.summary.achievements.map((achievement) => (
+            <Box key={achievement.id} sx={achievementStyle}>
+              <VerifiedIcon color="primary" sx={{ mr: 1.5, mt: 0.3, fontSize: '1rem' }} />
+              <Typography variant="body1" dangerouslySetInnerHTML={{ __html: achievement.text }} />
+            </Box>
+          ))}
 
-          <Box sx={achievementStyle}>
-            <VerifiedIcon color="primary" sx={{ mr: 1.5, mt: 0.3, fontSize: '1rem' }} />
-            <Typography variant="body1">
-              Led network expansion at <strong>Star Health and Allied Insurance</strong>, onboarding 3000+ hospitals across South India, improving claim settlement time by 35%.
-            </Typography>
-          </Box>
-
-          <Box sx={achievementStyle}>
-            <VerifiedIcon color="primary" sx={{ mr: 1.5, mt: 0.3, fontSize: '1rem' }} />
-            <Typography variant="body1">
-              Developed Automated new claims processing workflow at <strong>Star Health</strong>, reducing approval turnaround time from 4 hours to 190 milliseconds while maintaining 99.2% accuracy.
-            </Typography>
-          </Box>
-
-          <Box sx={achievementStyle}>
-            <VerifiedIcon color="primary" sx={{ mr: 1.5, mt: 0.3, fontSize: '1rem' }} />
-            <Typography variant="body1">
-              Developed and implemented healthcare pricing strategy at <strong>Star Health</strong> that optimized reimbursement rates and reduced payment disputes by 40%.
-            </Typography>
-          </Box>
-
-          <Typography 
-            variant="body1" 
-            paragraph
-            sx={{ lineHeight: 1.7, mt: 2 }}
-          >
-            Currently serving as National Head of Investigation and Fraud Mitigation at <strong>Cholamandalam MS General Insurance</strong>, overseeing health, accident, and travel claims verification across India. Previously held increasingly responsible leadership positions at <strong>Star Health and Allied Insurance</strong>, culminating in Division Head role.
-          </Typography>
-          
-          <Typography 
-            variant="body1" 
-            paragraph
-            sx={{ lineHeight: 1.7 }}
-          >
-            Holds Fellowship from the <strong>Insurance Institute of India</strong> with additional credentials in clinical research and pharmacovigilance from <strong>James Lind Institute</strong>. Pursuing further education in actuarial science through the <strong>Institute and Faculty of Actuaries</strong> to enhance analytical capabilities in risk assessment and financial modeling for insurance products.
-          </Typography>
         </Paper>
 
         {/* Contact Section */}
@@ -210,7 +171,7 @@ function HomePage() {
               alignItems: 'center'
             }}
           >
-            Contact Information
+            {homeContent.contact.title}
           </Typography>
           <Divider sx={{ mb: 3 }} />
           <Grid container spacing={2}>
@@ -219,13 +180,13 @@ function HomePage() {
                 <EmailIcon color="primary" sx={{ mr: 2, fontSize: 28 }} />
                 <Typography variant="body1">
                   <Link 
-                    href="mailto:santosh.sarangan@gmail.com"
+                    href={`mailto:${homeContent.contact.email}`}
                     sx={{ 
                       textDecoration: 'none',
                       '&:hover': { textDecoration: 'underline' } 
                     }}
                   >
-                    santosh.sarangan@gmail.com
+                    {homeContent.contact.email}
                   </Link>
                 </Typography>
               </Box>
@@ -235,7 +196,7 @@ function HomePage() {
                 <LinkedInIcon color="primary" sx={{ mr: 2, fontSize: 28 }} />
                 <Typography variant="body1">
                   <Link 
-                    href="https://www.linkedin.com/in/dr-santosh-kumar-s-229898159" 
+                    href={homeContent.contact.linkedin}
                     target="_blank" 
                     rel="noopener noreferrer"
                     sx={{ 
@@ -243,7 +204,7 @@ function HomePage() {
                       '&:hover': { textDecoration: 'underline' } 
                     }}
                   >
-                    LinkedIn Profile
+                    {homeContent.contact.linkedinText}
                   </Link>
                 </Typography>
               </Box>

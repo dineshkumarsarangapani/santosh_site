@@ -25,10 +25,10 @@ import FolderSpecialIcon from '@mui/icons-material/FolderSpecial';
 import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { useThemeContext } from '../contexts/ThemeContext';
+import { dentistryContent } from '../content/dentistryContent';
 
 function DentistryPage() {
   const { mode } = useThemeContext();
-  const dentalSkills = ['General Dentistry', 'Oral Surgery', 'Dental Management', 'Preventive Care', 'Patient Education', 'Prosthodontics', 'Pediatric Dentistry'];
 
   // Conditional styles based on theme mode
   const cardStyle = {
@@ -68,17 +68,17 @@ function DentistryPage() {
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
             <MedicalServicesIcon color="primary" fontSize="large" sx={{ mr: 2 }} />
             <Typography variant="h3" component="h1">
-              Dentistry
+              {dentistryContent.pageTitle}
             </Typography>
           </Box>
           <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-            My education, professional experience, and expertise in the field of dentistry.
+            {dentistryContent.pageDescription}
           </Typography>
         </Paper>
 
         <Card sx={cardStyle}>
           <CardHeader 
-            title="Professional Summary"
+            title={dentistryContent.professionalSummary.title}
             avatar={
               <Avatar sx={{ bgcolor: 'primary.main' }}>
                 <ArticleIcon />
@@ -87,17 +87,13 @@ function DentistryPage() {
           />
           <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
           <CardContent>
-            <Typography variant="body1" paragraph sx={{ lineHeight: 1.7 }}>
-              Experienced dental professional with a Bachelor of Dental Surgery (BDS) from Tamil Nadu Government Dental College and Hospital, one of India's premier dental education institutions. Founded and operated Santosh Dental Clinic with a focus on preventive care and patient education, providing comprehensive dental services to over 500 patients from diverse socioeconomic backgrounds.
-            </Typography>
-            <Typography variant="body1" paragraph sx={{ lineHeight: 1.7 }}>
-              During my clinical practice, I specialized in preventive dentistry and patient education, with a particular focus on pediatric oral health. My approach emphasized early intervention and education to prevent serious dental issues, leading to improved long-term outcomes for patients.
-            </Typography>
-            <Typography variant="body1" paragraph sx={{ lineHeight: 1.7 }}>
-              My dental expertise has proven invaluable in my current role in health insurance, where I combine clinical knowledge with business acumen to effectively evaluate dental claims, develop appropriate coverage policies, and optimize provider networks. This unique combination of dental and administrative experience allows me to bridge the gap between clinical practice and insurance operations.
-            </Typography>
+            {dentistryContent.professionalSummary.paragraphs.map((para, index) => (
+              <Typography key={index} variant="body1" paragraph sx={{ lineHeight: 1.7 }}>
+                {para}
+              </Typography>
+            ))}
             <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', gap: 1, mt: 2 }}>
-              {dentalSkills.map((skill) => (
+              {dentistryContent.professionalSummary.skills.map((skill) => (
                 <Chip 
                   key={skill} 
                   label={skill} 
@@ -112,7 +108,7 @@ function DentistryPage() {
 
         <Card sx={cardStyle}>
           <CardHeader 
-            title="Clinical Specializations"
+            title={dentistryContent.clinicalSpecializations.title}
             avatar={
               <Avatar sx={{ bgcolor: 'primary.main' }}>
                 <FolderSpecialIcon />
@@ -122,53 +118,25 @@ function DentistryPage() {
           <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
           <CardContent>
             <Grid container spacing={3}>
-              <Grid item xs={12} md={6}>
-                <Paper elevation={0} sx={innerPaperStyle}>
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    Preventive Dentistry
-                  </Typography>
-                  <Typography variant="body2" sx={{ lineHeight: 1.7 }}>
-                    Developed personalized preventive care plans for patients focusing on long-term oral health. Implemented comprehensive patient education protocols that resulted in improved home care compliance and reduced need for invasive treatments.
-                  </Typography>
-                </Paper>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Paper elevation={0} sx={innerPaperStyle}>
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    Oral Surgery
-                  </Typography>
-                  <Typography variant="body2" sx={{ lineHeight: 1.7 }}>
-                    Assisted in complex surgical procedures including impacted wisdom teeth extractions and minor oral surgeries. Developed post-operative care protocols to minimize complications and improve recovery outcomes.
-                  </Typography>
-                </Paper>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Paper elevation={0} sx={innerPaperStyle}>
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    Pediatric Dentistry
-                  </Typography>
-                  <Typography variant="body2" sx={{ lineHeight: 1.7 }}>
-                    Specialized in creating positive dental experiences for pediatric patients to establish lifelong oral health habits. Developed child-friendly patient education materials that significantly improved treatment compliance.
-                  </Typography>
-                </Paper>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Paper elevation={0} sx={innerPaperStyle}>
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    Dental Practice Management
-                  </Typography>
-                  <Typography variant="body2" sx={{ lineHeight: 1.7 }}>
-                    Applied business principles to dental practice operations, including staff management, patient scheduling, and financial planning. Implemented digital record systems that improved operational efficiency and patient care coordination.
-                  </Typography>
-                </Paper>
-              </Grid>
+              {dentistryContent.clinicalSpecializations.specializations.map((spec) => (
+                <Grid item xs={12} md={6} key={spec.id}>
+                  <Paper elevation={0} sx={innerPaperStyle}>
+                    <Typography variant="h6" component="h3" gutterBottom>
+                      {spec.title}
+                    </Typography>
+                    <Typography variant="body2" sx={{ lineHeight: 1.7 }}>
+                      {spec.description}
+                    </Typography>
+                  </Paper>
+                </Grid>
+              ))}
             </Grid>
           </CardContent>
         </Card>
 
         <Card sx={cardStyle}>
           <CardHeader 
-            title="Education"
+            title={dentistryContent.education.title}
             avatar={
               <Avatar sx={{ bgcolor: 'primary.main' }}>
                 <SchoolIcon />
@@ -179,20 +147,21 @@ function DentistryPage() {
           <CardContent>
             <Paper elevation={0} sx={innerPaperStyle}>
               <Typography variant="h6" component="h3" gutterBottom>
-                TAMIL NADU GOVERNMENT DENTAL COLLEGE AND HOSPITAL
+                {dentistryContent.education.institution}
               </Typography>
               <Typography variant="subtitle1" gutterBottom>
-                (Inst. Code - 020), CHENNAI
+                {dentistryContent.education.location}
               </Typography>
               <Typography variant="body1" color="text.secondary" gutterBottom>
-                Bachelor of Dental Surgery (BDS), Dentistry · (2008 - 2013)
+                {dentistryContent.education.degree} · {dentistryContent.education.years}
               </Typography>
-              <Typography variant="body2" sx={{ mt: 2 }}>
-                • Comprehensive training in all aspects of dental medicine and surgical procedures
-                <br />
-                • Clinical rotations in Oral Surgery, Prosthodontics, Periodontics, and Pediatric Dentistry
-                <br />
-                • Additional coursework in Practice Management and Dental Public Health
+              <Typography component="div" variant="body2" sx={{ mt: 2 }}>
+                {dentistryContent.education.details.map((detail, index) => (
+                  <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', mb: 0.5 }}>
+                     <Typography variant="body2" component="span" sx={{ mr: 1 }}>•</Typography>
+                     <Typography variant="body2" component="span">{detail}</Typography>
+                  </Box>
+                ))}
               </Typography>
             </Paper>
           </CardContent>
@@ -200,7 +169,7 @@ function DentistryPage() {
 
         <Card sx={cardStyle}>
           <CardHeader 
-            title="Academic Achievements"
+            title={dentistryContent.academicAchievements.title}
             avatar={
               <Avatar sx={{ bgcolor: 'primary.main' }}>
                 <EmojiEventsIcon />
@@ -210,19 +179,19 @@ function DentistryPage() {
           <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
           <CardContent>
             <Typography variant="body2" paragraph sx={{ lineHeight: 1.7 }}>
-              During my dental education at Tamil Nadu Government Dental College and Hospital, I distinguished myself through academic excellence and clinical proficiency. My final year project on "Preventive Dental Practices in Rural South India" earned recognition for its practical approach to public health dentistry.
+              {dentistryContent.academicAchievements.description}
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 2 }}>
-              <Chip label="Dean's List 2011-2012" color="primary" size="small" sx={chipStyle} />
-              <Chip label="Clinical Excellence Award" color="primary" size="small" sx={chipStyle} />
-              <Chip label="Community Dentistry Recognition" color="primary" size="small" sx={chipStyle} />
+              {dentistryContent.academicAchievements.achievements.map((achieve) => (
+                <Chip key={achieve.id} label={achieve.label} color="primary" size="small" sx={chipStyle} />
+              ))}
             </Box>
           </CardContent>
         </Card>
 
         <Card sx={cardStyle}>
           <CardHeader 
-            title="Continuing Education"
+            title={dentistryContent.continuingEducation.title}
             avatar={
               <Avatar sx={{ bgcolor: 'primary.main' }}>
                 <HealthAndSafetyIcon />
@@ -232,39 +201,28 @@ function DentistryPage() {
           <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
           <CardContent>
             <Grid container spacing={3}>
-              <Grid item xs={12} md={6}>
-                <Paper elevation={0} sx={innerPaperStyle}>
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    Advanced Preventive Dentistry Workshop
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" gutterBottom>
-                    Indian Dental Association • 2015
-                  </Typography>
-                  <Typography variant="body2">
-                    Comprehensive training on the latest preventive techniques and patient education methodologies.
-                  </Typography>
-                </Paper>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Paper elevation={0} sx={innerPaperStyle}>
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    Dental Practice Management Certificate
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" gutterBottom>
-                    Dental Management Academy • 2014
-                  </Typography>
-                  <Typography variant="body2">
-                    Focused on efficient clinic operations, patient scheduling systems, and financial management for dental practices.
-                  </Typography>
-                </Paper>
-              </Grid>
+              {dentistryContent.continuingEducation.courses.map((course) => (
+                <Grid item xs={12} md={6} key={course.id}>
+                  <Paper elevation={0} sx={innerPaperStyle}>
+                    <Typography variant="h6" component="h3" gutterBottom>
+                      {course.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" gutterBottom>
+                      {course.institution} • {course.year}
+                    </Typography>
+                    <Typography variant="body2">
+                      {course.description}
+                    </Typography>
+                  </Paper>
+                </Grid>
+              ))}
             </Grid>
           </CardContent>
         </Card>
 
         <Card sx={{...cardStyle, mb: 0}}>
           <CardHeader 
-            title="Professional Experience"
+            title={dentistryContent.professionalExperience.title}
             avatar={
               <Avatar sx={{ bgcolor: 'primary.main' }}>
                 <WorkIcon />
@@ -287,85 +245,37 @@ function DentistryPage() {
                 borderRadius: '4px',
               }
             }}>
-              <TimelineItem>
-                <TimelineSeparator>
-                  <TimelineDot color="primary" />
-                  <TimelineConnector sx={{ 
-                    bgcolor: mode === 'light' ? 'primary.main' : 'rgba(38, 132, 255, 0.3)'
-                  }} />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Typography variant="h6" component="h3">
-                    Santosh Dental Clinic
-                  </Typography>
-                  <Typography variant="body1" gutterBottom>
-                    Founder & Practitioner
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" gutterBottom>
-                    July 2015 - September 2017 (2 years 3 months)
-                  </Typography>
-                  <Typography variant="body2">
-                    • Established and operated a private dental practice serving over 500 patients from diverse backgrounds
-                    <br />
-                    • Specialized in preventive dentistry and patient education with focus on long-term oral health
-                    <br />
-                    • Developed community outreach programs targeting underserved populations
-                    <br />
-                    • Implemented digital record keeping and appointment scheduling systems to improve operational efficiency
-                  </Typography>
-                </TimelineContent>
-              </TimelineItem>
-
-              <TimelineItem>
-                <TimelineSeparator>
-                  <TimelineDot color="primary" />
-                  <TimelineConnector sx={{ 
-                    bgcolor: mode === 'light' ? 'primary.main' : 'rgba(38, 132, 255, 0.3)'
-                  }} />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Typography variant="h6" component="h3">
-                    Malligai Dental Hospital - India
-                  </Typography>
-                  <Typography variant="body1" gutterBottom>
-                    Consultant
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" gutterBottom>
-                    June 2015 - July 2015 (2 months)
-                  </Typography>
-                  <Typography variant="body2">
-                    • Provided specialized dental consultations and treatment procedures for complex cases
-                    <br />
-                    • Assisted in complex oral surgery cases with the senior medical team
-                    <br />
-                    • Participated in multi-disciplinary treatment planning for comprehensive patient care
-                  </Typography>
-                </TimelineContent>
-              </TimelineItem>
-
-              <TimelineItem>
-                <TimelineSeparator>
-                  <TimelineDot color="primary" />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Typography variant="h6" component="h3">
-                    My Dentist Orthodontic Centre
-                  </Typography>
-                  <Typography variant="body1" gutterBottom>
-                    Medical Administrator
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" gutterBottom>
-                    December 2014 - June 2015 (7 months)
-                  </Typography>
-                  <Typography variant="body2">
-                    • Managed clinic operations and coordinated patient scheduling for a busy orthodontic practice
-                    <br />
-                    • Implemented efficient workflow procedures to improve patient care and reduce wait times
-                    <br />
-                    • Developed patient follow-up protocols that improved treatment compliance by 35%
-                  </Typography>
-                </TimelineContent>
-              </TimelineItem>
+              {dentistryContent.professionalExperience.timeline.map((exp, index) => (
+                <TimelineItem key={exp.id}>
+                  <TimelineSeparator>
+                    <TimelineDot color="primary" />
+                    {index < dentistryContent.professionalExperience.timeline.length - 1 && (
+                      <TimelineConnector sx={{ 
+                        bgcolor: mode === 'light' ? 'primary.main' : 'rgba(38, 132, 255, 0.3)'
+                      }} />
+                    )}
+                  </TimelineSeparator>
+                  <TimelineContent>
+                    <Typography variant="h6" component="h3">
+                      {exp.company}
+                    </Typography>
+                    <Typography variant="body1" gutterBottom>
+                      {exp.role}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" gutterBottom>
+                      {exp.duration}
+                    </Typography>
+                    <Typography component="div" variant="body2">
+                       {exp.responsibilities.map((resp, respIndex) => (
+                        <React.Fragment key={respIndex}>
+                          • {resp}
+                          {respIndex < exp.responsibilities.length - 1 && <br />}
+                        </React.Fragment>
+                      ))}
+                    </Typography>
+                  </TimelineContent>
+                </TimelineItem>
+              ))}
             </Timeline>
           </CardContent>
         </Card>

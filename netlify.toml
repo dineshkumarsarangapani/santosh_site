@@ -1,0 +1,14 @@
+# Netlify configuration file
+
+# Redirect rule for Single Page Applications (SPA)
+# This ensures that all paths are redirected to index.html
+# so that client-side routing (like React Router) can handle them.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Build settings (Optional - you might have configured these in the UI)
+# [build]
+#   command = "npm run build"  # Or "vite build"
+#   publish = "dist"           # Ensure this matches your Vite output directory 
