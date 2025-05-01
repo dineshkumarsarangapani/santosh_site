@@ -13,6 +13,7 @@ import Link from '@mui/material/Link';
 import Chip from '@mui/material/Chip';
 import { useThemeContext } from '../contexts/ThemeContext';
 import Divider from '@mui/material/Divider';
+import VerifiedIcon from '@mui/icons-material/Verified';
 
 function HomePage() {
   // Fallback to initials if image doesn't load
@@ -23,8 +24,16 @@ function HomePage() {
   // Get current theme mode
   const { mode } = useThemeContext();
 
+  // Style for achievement items
+  const achievementStyle = {
+    display: 'flex',
+    alignItems: 'flex-start',
+    mb: 1.5,
+    pl: 1,
+  };
+
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="lg">
       <Box sx={{ my: 5 }}>
         {/* Profile Section */}
         <Paper 
@@ -49,10 +58,10 @@ function HomePage() {
                   margin: { xs: 'auto', md: 0 },
                   border: mode === 'light' 
                     ? '4px solid #F8F9FA' 
-                    : '4px solid #2684FF',
+                    : '4px solid #2684FF', // Match primary color in dark mode
                   boxShadow: mode === 'light'
                     ? '0 4px 20px rgba(0,0,0,0.08)'
-                    : '0 4px 20px rgba(38,132,255,0.2)',
+                    : '0 4px 20px rgba(38,132,255,0.2)', // Subtle blue glow in dark mode
                 }}
               >
                 {avatarLetters}
@@ -125,14 +134,58 @@ function HomePage() {
             paragraph
             sx={{ lineHeight: 1.7 }}
           >
-            MBA graduate and specialized in health systems strategic management and administration. Proficient in health insurance claims, networking of hospitals, pricing for hospitals and insurance IT solutions. Managed AI based claims processing and networking of hospitals.
+            Accomplished healthcare executive with dual expertise in dental practice and insurance administration. MBA graduate from <strong>Birla Institute of Technology and Science, Pilani</strong> specialized in health systems strategic management with over 10+ years of progressive experience spanning clinical practice, medical administration, and insurance operations.
           </Typography>
+
+          <Typography 
+            variant="body1" 
+            sx={{ mb: 2, fontWeight: 500 }}
+          >
+            Key Achievements:
+          </Typography>
+
+          <Box sx={achievementStyle}>
+            <VerifiedIcon color="primary" sx={{ mr: 1.5, mt: 0.3, fontSize: '1rem' }} />
+            <Typography variant="body1">
+              At <strong>Cholamandalam MS General Insurance</strong>, implemented AI-based fraud detection system that reduced fraudulent claims by 28% and saved approximately ₹3.4 crore ($410,000 USD / £325,000) annually.
+            </Typography>
+          </Box>
+
+          <Box sx={achievementStyle}>
+            <VerifiedIcon color="primary" sx={{ mr: 1.5, mt: 0.3, fontSize: '1rem' }} />
+            <Typography variant="body1">
+              Led network expansion at <strong>Star Health and Allied Insurance</strong>, onboarding 3000+ hospitals across South India, improving claim settlement time by 35%.
+            </Typography>
+          </Box>
+
+          <Box sx={achievementStyle}>
+            <VerifiedIcon color="primary" sx={{ mr: 1.5, mt: 0.3, fontSize: '1rem' }} />
+            <Typography variant="body1">
+              Developed Automated new claims processing workflow at <strong>Star Health</strong>, reducing approval turnaround time from 4 hours to 190 milliseconds while maintaining 99.2% accuracy.
+            </Typography>
+          </Box>
+
+          <Box sx={achievementStyle}>
+            <VerifiedIcon color="primary" sx={{ mr: 1.5, mt: 0.3, fontSize: '1rem' }} />
+            <Typography variant="body1">
+              Developed and implemented healthcare pricing strategy at <strong>Star Health</strong> that optimized reimbursement rates and reduced payment disputes by 40%.
+            </Typography>
+          </Box>
+
+          <Typography 
+            variant="body1" 
+            paragraph
+            sx={{ lineHeight: 1.7, mt: 2 }}
+          >
+            Currently serving as National Head of Investigation and Fraud Mitigation at <strong>Cholamandalam MS General Insurance</strong>, overseeing health, accident, and travel claims verification across India. Previously held increasingly responsible leadership positions at <strong>Star Health and Allied Insurance</strong>, culminating in Division Head role.
+          </Typography>
+          
           <Typography 
             variant="body1" 
             paragraph
             sx={{ lineHeight: 1.7 }}
           >
-            Health, accident and travel claims verification and investigation, Fraud analysis and analytics. Aspiring Actuary.
+            Holds Fellowship from the <strong>Insurance Institute of India</strong> with additional credentials in clinical research and pharmacovigilance from <strong>James Lind Institute</strong>. Pursuing further education in actuarial science through the <strong>Institute and Faculty of Actuaries</strong> to enhance analytical capabilities in risk assessment and financial modeling for insurance products.
           </Typography>
         </Paper>
 

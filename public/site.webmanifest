@@ -1,0 +1,14 @@
+{
+  "name": "Dr. Santosh Kumar S",
+  "short_name": "Dr. Santosh",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone"
+} 

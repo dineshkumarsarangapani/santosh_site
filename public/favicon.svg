@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <style>
+    .initials {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      fill: #FFFFFF;
+    }
+    @media (prefers-color-scheme: light) {
+      .bg {
+        fill: #0A192F;
+      }
+      .initials {
+        fill: #FFFFFF;
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+      .bg {
+        fill: #2684FF;
+      }
+      .initials {
+        fill: #FFFFFF;
+      }
+    }
+  </style>
+  <rect class="bg" x="0" y="0" width="32" height="32" rx="6" />
+  <text class="initials" x="16" y="21" text-anchor="middle">DS</text>
+</svg> 
