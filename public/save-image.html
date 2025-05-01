@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Save Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 300px;
+            border-radius: 50%;
+            border: 3px solid #1976d2;
+            margin: 20px 0;
+        }
+        .instructions {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Save Image as santosh.png</h1>
+    
+    <div class="instructions">
+        <p>Please follow these steps to save Dr. Santosh's image:</p>
+        <ol>
+            <li>Right-click on the image below</li>
+            <li>Select "Save Image As"</li>
+            <li>Navigate to the <strong>public</strong> folder in your project</li>
+            <li>Save the file as <strong>santosh.png</strong></li>
+            <li>Return to your app and refresh</li>
+        </ol>
+        <p>The image will then appear on the homepage.</p>
+    </div>
+    
+    <img id="profileImage" alt="Dr. Santosh Kumar S">
+    
+    <script>
+        // This will load the image from the data URL
+        window.onload = function() {
+            // The image will need to be manually added here
+            const img = document.getElementById('profileImage');
+            // Placeholder instruction - you'll need to right-click and save the image from your original source
+            img.src = "paste-image-data-url-here";
+        };
+    </script>
+</body>
+</html> 

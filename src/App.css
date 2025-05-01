@@ -1,0 +1,21 @@
+/* Remove all the default Vite styles and replace with clean styling */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  /* Remove text-align: center */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  width: 100%;
+  padding: 0; /* Remove default padding */
+}
+
+/* Remove all animations, cards, and other unused styles */
