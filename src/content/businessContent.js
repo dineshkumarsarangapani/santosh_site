@@ -14,23 +14,27 @@ export const businessContent = {
     achievements: [
       {
         id: "biz-achieve-fraud",
+        icon: "Security",
         title: "Fraud Detection Innovation",
-        description: "Led the implementation of an AI-based fraud detection system at Cholamandalam MS that analyzes claim patterns and provider behaviors to identify potential fraud. This initiative reduced fraudulent claims by 28% and saved approximately ₹3.4 crore ($410,000 USD / £325,000) annually, significantly improving the company's financial performance."
+        description: "Led the implementation of an AI-based fraud detection system at Cholamandalam MS that analyzes claim patterns and provider behaviors to identify potential fraud. This initiative reduced fraudulent claims by 28% and saved approximately ₹3.4 crore ($410,000 USD / £325,000) annually, significantly improving the company's financial performance and establishing new benchmarks for risk mitigation."
       },
       {
         id: "biz-achieve-network",
+        icon: "Lan",
         title: "Network Expansion",
-        description: "As Division Head at Star Health, led the strategic expansion of the provider network across South India, successfully onboarding 3000+ hospitals and establishing standardized service agreements. This expansion improved geographical coverage for policyholders and enhanced claim settlement efficiency by 35%."
+        description: "As Division Head at Star Health, led the strategic expansion of the provider network across South India, successfully onboarding 3000+ hospitals through targeted outreach and establishing standardized service agreements. This expansion improved geographical coverage for policyholders and enhanced claim settlement efficiency by 35%."
       },
       {
         id: "biz-achieve-process",
+        icon: "Speed",
         title: "Process Optimization",
-        description: "Developed new claims processing workflow at Star Health, implementing a tiered review system and standardized documentation requirements. These changes reduced approval turnaround time from 7 days to 3 days while maintaining an exceptional 99.2% accuracy rate."
+        description: "Developed new claims processing workflow at Star Health, implementing a tiered review system, standardized documentation requirements, and automated pre-authorization checks. These changes reduced approval turnaround time from 7 days to 3 days while maintaining an exceptional 99.2% accuracy rate."
       },
       {
         id: "biz-achieve-pricing",
+        icon: "PriceCheck",
         title: "Strategic Pricing",
-        description: "Developed and implemented a data-driven healthcare pricing strategy at Vidal Healthcare that balanced fair reimbursement for providers with cost management for insurers. This initiative optimized reimbursement rates and reduced payment disputes by 40%, improving relationships with network providers."
+        description: "Developed and implemented a data-driven healthcare pricing strategy at Vidal Healthcare that balanced fair reimbursement for providers with effective cost management for insurers. This initiative optimized reimbursement rates, reduced payment disputes by 40%, and improved long-term relationships with network providers."
       }
     ]
   },
@@ -73,10 +77,11 @@ export const businessContent = {
         duration: "March 2023 - Present | Chennai, Tamil Nadu, India",
         responsibilities: [
           "Implemented AI-based fraud detection system, reducing fraudulent claims by 28% and saving ₹3.4 crore ($410,000 USD / £325,000) annually",
-          "Led a team of 25 professionals across 4 regional offices, overseeing health, accident, and travel claims verification",
-          "Developed corporate-wide fraud prevention strategy, resulting in 40% faster fraud identification",
-          "Collaborate with legal and medical teams to establish robust verification protocols",
-          "Report directly to C-suite executives on fraud trends, providing strategic insights for policy development"
+          "Led a team of 25 professionals across 4 regional offices, overseeing health, accident, and travel claims verification and investigation processes nationwide.",
+          "Developed corporate-wide fraud prevention strategy incorporating predictive analytics, resulting in 40% faster fraud identification and intervention.",
+          "Collaborate extensively with legal, medical, and underwriting departments to establish robust, cross-functional verification protocols and policies.",
+          "Report directly to C-suite executives on national fraud trends, investigation outcomes, and providing strategic insights for underwriting and policy development.",
+          "Conduct high-level negotiations with external investigation agencies and oversee vendor performance management."
         ]
       },
       {
@@ -89,10 +94,11 @@ export const businessContent = {
             title: "Division Head",
             duration: "June 2022 - February 2023 (9 months)",
             responsibilities: [
-              "Led the provider network team for South India, managing relationships with 3000+ hospitals",
-              "Streamlined authorization process, reducing turnaround time by 35%",
-              "Negotiated favorable reimbursement rates with key hospital chains, achieving 12% cost savings",
-              "Implemented quality monitoring system for in-network providers, improving patient satisfaction scores by 18%"
+              "Led the provider network team for South India, managing strategic relationships and contract negotiations with 3000+ hospitals and healthcare facilities.",
+              "Spearheaded initiatives to streamline the pre-authorization process using digital tools, reducing average turnaround time by 35% for outpatient procedures.",
+              "Negotiated favorable reimbursement rates and value-based care agreements with key hospital chains across the region, achieving 12% cost savings on major procedures.",
+              "Implemented a comprehensive quality monitoring system for in-network providers, incorporating patient feedback and clinical outcome metrics, improving patient satisfaction scores by 18%.",
+              "Developed and executed regional network strategy aligning with corporate goals for market share growth and service accessibility."
             ]
           },
           {
@@ -100,10 +106,11 @@ export const businessContent = {
             title: "Deputy Head Of Department",
             duration: "October 2020 - June 2022 (1 year 9 months)",
             responsibilities: [
-              "Developed and implemented claims adjudication guidelines across multiple product lines",
-              "Reduced claim dispute rate by 42% through improved communication protocols",
-              "Conducted training sessions for claims processors, improving operational efficiency by 22%",
-              "Assisted in development of new health insurance products, incorporating insights from claims data"
+              "Developed, documented, and implemented standardized claims adjudication guidelines across multiple health insurance product lines (individual, group, specialized).",
+              "Reduced claim dispute rates by 42% through proactive provider communication protocols and clarified policy interpretation workshops.",
+              "Designed and conducted comprehensive training sessions for claims processors and medical reviewers, improving operational efficiency and adjudication consistency by 22%.",
+              "Assisted actively in the development and launch of new health insurance products, incorporating insights from claims data analysis and risk assessment.",
+              "Managed escalation pathways for complex claims, ensuring timely resolution and maintaining high levels of customer satisfaction."
             ]
           },
           {
@@ -111,10 +118,11 @@ export const businessContent = {
             title: "Manager",
             duration: "April 2019 - September 2020 (1 year 6 months)",
             responsibilities: [
-              "Supervised a team of 12 claim processors, handling 200+ claims daily",
-              "Improved claim accuracy rate to 99.2% through standardized review processes",
-              "Identified and implemented process improvements that reduced claim processing time by 30%",
-              "Collaborated with IT department to develop automated flagging system for potentially fraudulent claims"
+              "Supervised and mentored a team of 12 claim processors, handling an average daily volume of 200+ claims while consistently meeting service level agreements.",
+              "Improved overall claim accuracy rate to 99.2% through the implementation of rigorous multi-stage review processes and targeted quality audits.",
+              "Identified and implemented key process improvements, including workflow automation steps, that reduced average claim processing time by 30%.",
+              "Collaborated directly with the IT department to design and deploy an automated flagging system for potentially fraudulent or high-risk claims.",
+              "Prepared regular performance reports for senior management, analyzing team productivity and identifying areas for further optimization."
             ]
           },
           {
@@ -122,10 +130,11 @@ export const businessContent = {
             title: "Management Intern and Claims Processing",
             duration: "September 2018 - February 2019 (6 months)",
             responsibilities: [
-              "Conducted competitive analysis of health insurance products in the market",
-              "Processed claims and assisted in developing training materials for new hires",
-              "Participated in cross-departmental projects to gain comprehensive understanding of insurance operations",
-              "Contributed to process improvement initiatives that reduced paperwork by 25%"
+              "Conducted in-depth competitive analysis of prevailing health insurance products in the Indian market, presenting findings to the product development team.",
+              "Gained hands-on experience processing diverse health insurance claims (inpatient, outpatient, accident) according to company protocols.",
+              "Assisted senior staff in developing comprehensive training materials and standard operating procedures (SOPs) for new claims processing hires.",
+              "Participated actively in cross-departmental projects (underwriting, finance, IT) to gain a holistic understanding of insurance company operations.",
+              "Contributed to process improvement initiatives focused on digitalization, resulting in a 25% reduction in physical paperwork for claim submissions."
             ]
           }
         ]
@@ -136,11 +145,12 @@ export const businessContent = {
         role: "Senior Medical Advisor",
         duration: "September 2017 - August 2018 (1 year)",
         responsibilities: [
-          "Developed healthcare pricing strategy that optimized reimbursement rates and reduced payment disputes by 40%",
-          "Served as liaison between medical providers and insurance partners",
-          "Evaluated medical necessity and appropriateness of treatments for claim authorization",
-          "Conducted medical audits of providers to ensure compliance with service agreements",
-          "Created standardized treatment protocols for common procedures to improve consistency in care delivery"
+          "Developed and implemented an innovative healthcare pricing strategy that optimized reimbursement rates and reduced payment disputes by 40%.",
+          "Served as the primary medical liaison between network medical providers and key insurance partners, fostering collaborative relationships.",
+          "Evaluated complex medical necessity claims and appropriateness of treatments for high-value claim authorization, ensuring adherence to policy guidelines.",
+          "Conducted thorough medical audits of network providers to ensure consistent compliance with service level agreements and quality standards.",
+          "Created standardized clinical treatment protocols for common medical and dental procedures to improve consistency and predictability in care delivery.",
+          "Provided expert medical input for the development of new insurance products and benefit designs."
         ]
       }
     ]
@@ -153,14 +163,14 @@ export const businessContent = {
         title: "Healthcare Fraud Investigation Certificate",
         institution: "Association of Certified Fraud Examiners",
         year: "2023",
-        description: "Specialized training in detecting and investigating healthcare claim fraud, including emerging patterns and investigation techniques."
+        description: "Specialized training in detecting and investigating complex healthcare claim fraud, including data analysis techniques, legal considerations, and emerging patterns in fraudulent activities."
       },
       {
         id: "cert-analytics",
         title: "Healthcare Analytics Professional",
         institution: "International Institute for Analytics",
         year: "2022",
-        description: "Advanced certification in healthcare data analytics, focusing on claim pattern analysis and predictive modeling for risk assessment."
+        description: "Advanced certification in healthcare data analytics, focusing on claim pattern analysis, predictive modeling for risk assessment, and deriving actionable insights from large healthcare datasets."
       }
     ]
   },
@@ -180,8 +190,9 @@ export const businessContent = {
         detail: "Business Finance and Business Economics",
         years: "(July 2024 - July 2024)",
         description: [
-          "Specialized study in financial mathematics and statistical modeling for insurance risk assessment",
-          "Focus on economic principles applied to healthcare pricing and coverage determination"
+          "Specialized study in core financial mathematics, probability, and advanced statistical modeling techniques relevant to insurance risk assessment and pricing.",
+          "In-depth focus on micro and macroeconomic principles specifically applied to healthcare systems, insurance markets, and coverage determination strategies.",
+          "Comprehensive analysis of corporate finance concepts and diverse investment strategies pertinent to the management of insurance company assets and liabilities."
         ]
       },
       {
@@ -190,9 +201,9 @@ export const businessContent = {
         detail: "Fellowship, Health and General insurance",
         years: "(July 2023 - June 2024)",
         description: [
-          "Advanced training in health insurance claims management and underwriting principles",
-          "Certification in risk assessment methodologies and compliance frameworks",
-          "Research on fraud detection techniques in health insurance claims"
+          "Advanced, specialized training in health insurance claims management, complex underwriting principles, and provider network optimization strategies.",
+          "Rigorous certification covering sophisticated risk assessment methodologies, regulatory compliance frameworks, and ethical considerations within the insurance sector.",
+          "Independent research project focusing on the application of modern data analytics and fraud detection techniques in health insurance claims processing."
         ]
       },
       {
@@ -201,9 +212,9 @@ export const businessContent = {
         detail: "Master of Business Administration (MBA), Hospital and Health Care Facilities Administration/Management",
         years: "(2017 - 2019)",
         description: [
-          "Specialized in healthcare operations management and insurance administration",
-          "Capstone project: \"Optimizing Hospital-Insurer Relations for Improved Patient Outcomes\"",
-          "Coursework in healthcare economics, strategic planning, and financial management"
+          "Specialized MBA curriculum focusing on healthcare operations management, strategic planning for health systems, and insurance administration practices.",
+          "Capstone thesis project: \"Optimizing Hospital-Insurer Collaboration Models for Improved Patient Outcomes and Cost Efficiency\"",
+          "Extensive coursework covering healthcare economics, organizational behavior, health policy analysis, marketing, and corporate financial management."
         ]
       },
       {
@@ -212,9 +223,9 @@ export const businessContent = {
         detail: "Advanced Post-graduate Diploma in Clinical Research and Pharmacovigilance",
         years: "(2017 - 2018)",
         description: [
-          "Training in clinical trial design, medical data analysis, and regulatory compliance",
-          "Developed expertise in medical necessity assessment for treatment verification",
-          "Applied pharmacological knowledge to insurance policy development"
+          "Comprehensive training in clinical trial design methodologies, biostatistics, medical data analysis, and international regulatory compliance standards (GCP).",
+          "Developed practical expertise in medical necessity assessment protocols, adverse event reporting, and treatment verification procedures for insurance claims.",
+          "Applied detailed pharmacological knowledge and principles of drug safety monitoring to the development and refinement of health insurance policies."
         ]
       }
     ]

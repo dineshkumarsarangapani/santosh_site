@@ -64,14 +64,14 @@ export const dentistryContent = {
         title: "Advanced Preventive Dentistry Workshop",
         institution: "Indian Dental Association",
         year: "2015",
-        description: "Comprehensive training on the latest preventive techniques and patient education methodologies."
+        description: "Comprehensive training on the latest evidence-based preventive techniques, risk assessment protocols, and advanced patient education methodologies to promote long-term oral health."
       },
       {
         id: "cont-management",
         title: "Dental Practice Management Certificate",
         institution: "Dental Management Academy",
         year: "2014",
-        description: "Focused on efficient clinic operations, patient scheduling systems, and financial management for dental practices."
+        description: "Focused on efficient clinic operations, implementing effective patient scheduling systems, dental marketing strategies, and sound financial management principles for sustainable dental practices."
       }
     ]
   },

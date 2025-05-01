@@ -76,209 +76,215 @@ function DentistryPage() {
           </Typography>
         </Paper>
 
-        <Card sx={cardStyle}>
-          <CardHeader 
-            title={dentistryContent.professionalSummary.title}
-            avatar={
-              <Avatar sx={{ bgcolor: 'primary.main' }}>
-                <ArticleIcon />
-              </Avatar>
-            }
-          />
-          <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
-          <CardContent>
-            {dentistryContent.professionalSummary.paragraphs.map((para, index) => (
-              <Typography key={index} variant="body1" paragraph sx={{ lineHeight: 1.7 }}>
-                {para}
-              </Typography>
-            ))}
-            <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', gap: 1, mt: 2 }}>
-              {dentistryContent.professionalSummary.skills.map((skill) => (
-                <Chip 
-                  key={skill} 
-                  label={skill} 
-                  color="primary" 
-                  size="small"
-                  sx={chipStyle} 
-                />
-              ))}
-            </Stack>
-          </CardContent>
-        </Card>
-
-        <Card sx={cardStyle}>
-          <CardHeader 
-            title={dentistryContent.clinicalSpecializations.title}
-            avatar={
-              <Avatar sx={{ bgcolor: 'primary.main' }}>
-                <FolderSpecialIcon />
-              </Avatar>
-            }
-          />
-          <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
-          <CardContent>
-            <Grid container spacing={3}>
-              {dentistryContent.clinicalSpecializations.specializations.map((spec) => (
-                <Grid item xs={12} md={6} key={spec.id}>
-                  <Paper elevation={0} sx={innerPaperStyle}>
-                    <Typography variant="h6" component="h3" gutterBottom>
-                      {spec.title}
-                    </Typography>
-                    <Typography variant="body2" sx={{ lineHeight: 1.7 }}>
-                      {spec.description}
-                    </Typography>
-                  </Paper>
-                </Grid>
-              ))}
-            </Grid>
-          </CardContent>
-        </Card>
-
-        <Card sx={cardStyle}>
-          <CardHeader 
-            title={dentistryContent.education.title}
-            avatar={
-              <Avatar sx={{ bgcolor: 'primary.main' }}>
-                <SchoolIcon />
-              </Avatar>
-            }
-          />
-          <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
-          <CardContent>
-            <Paper elevation={0} sx={innerPaperStyle}>
-              <Typography variant="h6" component="h3" gutterBottom>
-                {dentistryContent.education.institution}
-              </Typography>
-              <Typography variant="subtitle1" gutterBottom>
-                {dentistryContent.education.location}
-              </Typography>
-              <Typography variant="body1" color="text.secondary" gutterBottom>
-                {dentistryContent.education.degree} · {dentistryContent.education.years}
-              </Typography>
-              <Typography component="div" variant="body2" sx={{ mt: 2 }}>
-                {dentistryContent.education.details.map((detail, index) => (
-                  <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', mb: 0.5 }}>
-                     <Typography variant="body2" component="span" sx={{ mr: 1 }}>•</Typography>
-                     <Typography variant="body2" component="span">{detail}</Typography>
-                  </Box>
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={4}>
+            <Card sx={{...cardStyle, position: 'sticky', top: '80px'}}>
+              <CardHeader 
+                title={dentistryContent.professionalSummary.title}
+                avatar={
+                  <Avatar sx={{ bgcolor: 'primary.main' }}>
+                    <ArticleIcon />
+                  </Avatar>
+                }
+              />
+              <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
+              <CardContent>
+                {dentistryContent.professionalSummary.paragraphs.map((para, index) => (
+                  <Typography key={index} variant="body1" paragraph sx={{ lineHeight: 1.7 }}>
+                    {para}
+                  </Typography>
                 ))}
-              </Typography>
-            </Paper>
-          </CardContent>
-        </Card>
+                <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', gap: 1, mt: 2 }}>
+                  {dentistryContent.professionalSummary.skills.map((skill) => (
+                    <Chip 
+                      key={skill} 
+                      label={skill} 
+                      color="primary" 
+                      size="small"
+                      sx={chipStyle} 
+                    />
+                  ))}
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
 
-        <Card sx={cardStyle}>
-          <CardHeader 
-            title={dentistryContent.academicAchievements.title}
-            avatar={
-              <Avatar sx={{ bgcolor: 'primary.main' }}>
-                <EmojiEventsIcon />
-              </Avatar>
-            }
-          />
-          <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
-          <CardContent>
-            <Typography variant="body2" paragraph sx={{ lineHeight: 1.7 }}>
-              {dentistryContent.academicAchievements.description}
-            </Typography>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 2 }}>
-              {dentistryContent.academicAchievements.achievements.map((achieve) => (
-                <Chip key={achieve.id} label={achieve.label} color="primary" size="small" sx={chipStyle} />
-              ))}
-            </Box>
-          </CardContent>
-        </Card>
-
-        <Card sx={cardStyle}>
-          <CardHeader 
-            title={dentistryContent.continuingEducation.title}
-            avatar={
-              <Avatar sx={{ bgcolor: 'primary.main' }}>
-                <HealthAndSafetyIcon />
-              </Avatar>
-            }
-          />
-          <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
-          <CardContent>
-            <Grid container spacing={3}>
-              {dentistryContent.continuingEducation.courses.map((course) => (
-                <Grid item xs={12} md={6} key={course.id}>
-                  <Paper elevation={0} sx={innerPaperStyle}>
-                    <Typography variant="h6" component="h3" gutterBottom>
-                      {course.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" gutterBottom>
-                      {course.institution} • {course.year}
-                    </Typography>
-                    <Typography variant="body2">
-                      {course.description}
-                    </Typography>
-                  </Paper>
+          <Grid item xs={12} md={8}>
+            <Card sx={cardStyle}>
+              <CardHeader 
+                title={dentistryContent.clinicalSpecializations.title}
+                avatar={
+                  <Avatar sx={{ bgcolor: 'primary.main' }}>
+                    <FolderSpecialIcon />
+                  </Avatar>
+                }
+              />
+              <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
+              <CardContent>
+                <Grid container spacing={3}>
+                  {dentistryContent.clinicalSpecializations.specializations.map((spec) => (
+                    <Grid item xs={12} md={6} key={spec.id}>
+                      <Paper elevation={0} sx={{...innerPaperStyle, height: '100%'}}>
+                        <Typography variant="h6" component="h3" gutterBottom>
+                          {spec.title}
+                        </Typography>
+                        <Typography variant="body2" sx={{ lineHeight: 1.7 }}>
+                          {spec.description}
+                        </Typography>
+                      </Paper>
+                    </Grid>
+                  ))}
                 </Grid>
-              ))}
-            </Grid>
-          </CardContent>
-        </Card>
+              </CardContent>
+            </Card>
 
-        <Card sx={{...cardStyle, mb: 0}}>
-          <CardHeader 
-            title={dentistryContent.professionalExperience.title}
-            avatar={
-              <Avatar sx={{ bgcolor: 'primary.main' }}>
-                <WorkIcon />
-              </Avatar>
-            }
-          />
-          <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
-          <CardContent>
-            <Timeline position="right" sx={{
-              p: 0,
-              m: 0,
-              '& .MuiTimelineItem-root': {
-                minHeight: 'auto',
-                mb: 2
-              },
-              '& .MuiTimelineContent-root': {
-                p: 2,
-                bgcolor: mode === 'light' ? 'background.default' : 'rgba(38, 132, 255, 0.04)',
-                border: mode === 'light' ? 'none' : '1px solid rgba(38, 132, 255, 0.1)',
-                borderRadius: '4px',
-              }
-            }}>
-              {dentistryContent.professionalExperience.timeline.map((exp, index) => (
-                <TimelineItem key={exp.id}>
-                  <TimelineSeparator>
-                    <TimelineDot color="primary" />
-                    {index < dentistryContent.professionalExperience.timeline.length - 1 && (
-                      <TimelineConnector sx={{ 
-                        bgcolor: mode === 'light' ? 'primary.main' : 'rgba(38, 132, 255, 0.3)'
-                      }} />
-                    )}
-                  </TimelineSeparator>
-                  <TimelineContent>
-                    <Typography variant="h6" component="h3">
-                      {exp.company}
-                    </Typography>
-                    <Typography variant="body1" gutterBottom>
-                      {exp.role}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" gutterBottom>
-                      {exp.duration}
-                    </Typography>
-                    <Typography component="div" variant="body2">
-                       {exp.responsibilities.map((resp, respIndex) => (
-                        <React.Fragment key={respIndex}>
-                          • {resp}
-                          {respIndex < exp.responsibilities.length - 1 && <br />}
-                        </React.Fragment>
-                      ))}
-                    </Typography>
-                  </TimelineContent>
-                </TimelineItem>
-              ))}
-            </Timeline>
-          </CardContent>
-        </Card>
+            <Card sx={cardStyle}>
+              <CardHeader 
+                title={dentistryContent.education.title}
+                avatar={
+                  <Avatar sx={{ bgcolor: 'primary.main' }}>
+                    <SchoolIcon />
+                  </Avatar>
+                }
+              />
+              <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
+              <CardContent>
+                <Paper elevation={0} sx={{...innerPaperStyle, mb: 0}}>
+                  <Typography variant="h6" component="h3" gutterBottom>
+                    {dentistryContent.education.institution}
+                  </Typography>
+                  <Typography variant="subtitle1" gutterBottom>
+                    {dentistryContent.education.location}
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary" gutterBottom>
+                    {dentistryContent.education.degree} · {dentistryContent.education.years}
+                  </Typography>
+                  <Typography component="div" variant="body2" sx={{ mt: 2 }}>
+                    {dentistryContent.education.details.map((detail, index) => (
+                      <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', mb: 0.5 }}>
+                         <Typography variant="body2" component="span" sx={{ mr: 1 }}>•</Typography>
+                         <Typography variant="body2" component="span">{detail}</Typography>
+                      </Box>
+                    ))}
+                  </Typography>
+                </Paper>
+              </CardContent>
+            </Card>
+
+            <Card sx={cardStyle}>
+              <CardHeader 
+                title={dentistryContent.academicAchievements.title}
+                avatar={
+                  <Avatar sx={{ bgcolor: 'primary.main' }}>
+                    <EmojiEventsIcon />
+                  </Avatar>
+                }
+              />
+              <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
+              <CardContent>
+                <Typography variant="body2" paragraph sx={{ lineHeight: 1.7 }}>
+                  {dentistryContent.academicAchievements.description}
+                </Typography>
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 2 }}>
+                  {dentistryContent.academicAchievements.achievements.map((achieve) => (
+                    <Chip key={achieve.id} label={achieve.label} color="primary" size="small" sx={chipStyle} />
+                  ))}
+                </Box>
+              </CardContent>
+            </Card>
+
+            <Card sx={cardStyle}>
+              <CardHeader 
+                title={dentistryContent.continuingEducation.title}
+                avatar={
+                  <Avatar sx={{ bgcolor: 'primary.main' }}>
+                    <HealthAndSafetyIcon />
+                  </Avatar>
+                }
+              />
+              <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
+              <CardContent>
+                <Grid container spacing={3}>
+                  {dentistryContent.continuingEducation.courses.map((course) => (
+                    <Grid item xs={12} md={6} key={course.id}>
+                      <Paper elevation={0} sx={{...innerPaperStyle, height: '100%'}}>
+                        <Typography variant="h6" component="h3" gutterBottom>
+                          {course.title}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" gutterBottom>
+                          {course.institution} • {course.year}
+                        </Typography>
+                        <Typography variant="body2">
+                          {course.description}
+                        </Typography>
+                      </Paper>
+                    </Grid>
+                  ))}
+                </Grid>
+              </CardContent>
+            </Card>
+
+            <Card sx={{...cardStyle, mb: 0}}>
+              <CardHeader 
+                title={dentistryContent.professionalExperience.title}
+                avatar={
+                  <Avatar sx={{ bgcolor: 'primary.main' }}>
+                    <WorkIcon />
+                  </Avatar>
+                }
+              />
+              <Divider sx={{ opacity: mode === 'dark' ? 0.1 : 0.2 }} />
+              <CardContent>
+                <Timeline position="right" sx={{
+                  p: 0,
+                  m: 0,
+                  '& .MuiTimelineItem-root': {
+                    minHeight: 'auto',
+                    mb: 2
+                  },
+                  '& .MuiTimelineContent-root': {
+                    p: 2,
+                    bgcolor: mode === 'light' ? 'background.default' : 'rgba(38, 132, 255, 0.04)',
+                    border: mode === 'light' ? 'none' : '1px solid rgba(38, 132, 255, 0.1)',
+                    borderRadius: '4px',
+                  }
+                }}>
+                  {dentistryContent.professionalExperience.timeline.map((exp, index) => (
+                    <TimelineItem key={exp.id}>
+                      <TimelineSeparator>
+                        <TimelineDot color="primary" />
+                        {index < dentistryContent.professionalExperience.timeline.length - 1 && (
+                          <TimelineConnector sx={{ 
+                            bgcolor: mode === 'light' ? 'primary.main' : 'rgba(38, 132, 255, 0.3)'
+                          }} />
+                        )}
+                      </TimelineSeparator>
+                      <TimelineContent>
+                        <Typography variant="h6" component="h3">
+                          {exp.company}
+                        </Typography>
+                        <Typography variant="body1" gutterBottom>
+                          {exp.role}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" gutterBottom>
+                          {exp.duration}
+                        </Typography>
+                        <Typography component="div" variant="body2">
+                           {exp.responsibilities.map((resp, respIndex) => (
+                            <React.Fragment key={respIndex}>
+                              • {resp}
+                              {respIndex < exp.responsibilities.length - 1 && <br />}
+                            </React.Fragment>
+                          ))}
+                        </Typography>
+                      </TimelineContent>
+                    </TimelineItem>
+                  ))}
+                </Timeline>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
       </Box>
     </Container>
   );
