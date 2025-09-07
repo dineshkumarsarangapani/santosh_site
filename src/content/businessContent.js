@@ -28,13 +28,13 @@ export const businessContent = {
         id: "biz-achieve-process",
         icon: "Speed",
         title: "Process Optimization",
-        description: "Developed new claims processing workflow at Star Health, implementing a tiered review system, standardized documentation requirements, and automated pre-authorization checks. These changes reduced approval turnaround time from 7 days to 3 days while maintaining an exceptional 99.2% accuracy rate."
+        description: "Developed new claims processing workflow at Star Health, implementing a tiered review system, standardized documentation requirements, and automated pre-authorization checks. These changes reduced approval turnaround time to 119 mil sec while maintaining an exceptional 99.2% accuracy rate, for specific ailments and procedures."
       },
       {
         id: "biz-achieve-pricing",
         icon: "PriceCheck",
         title: "Strategic Pricing",
-        description: "Developed and implemented a data-driven healthcare pricing strategy at Vidal Healthcare that balanced fair reimbursement for providers with effective cost management for insurers. This initiative optimized reimbursement rates, reduced payment disputes by 40%, and improved long-term relationships with network providers."
+        description: "Developed and implemented a data-driven healthcare pricing strategy at Star Health Insurance that balanced fair reimbursement for providers with effective cost management in terms of severity for insurer. This initiative optimized reimbursement rates, reduced payment disputes, and improved long-term relationships with network providers."
       }
     ]
   },
