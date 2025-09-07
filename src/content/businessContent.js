@@ -42,11 +42,11 @@ export const businessContent = {
     title: "Core Competencies",
     skills: [
       'Medical Under writing',
-      'Claim adjudication'
+      'Claim adjudication',
       'Insurance Operations',
-      'Provider Management'
+      'Provider Management',
       'Strategic Planing',
-      'Hospital Pricing'
+      'Hospital Pricing',
       'Regulatory Compliance',
       'Data Analysis',
       'Fraud Detection', 
