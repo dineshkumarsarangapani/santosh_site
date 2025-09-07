@@ -41,17 +41,22 @@ export const businessContent = {
   coreCompetencies: {
     title: "Core Competencies",
     skills: [
+      'Medical Under writing',
+      'Claim adjudication'
+      'Insurance Operations',
+      'Provider Management'
+      'Strategic Planing',
+      'Hospital Pricing'
+      'Regulatory Compliance',
+      'Data Analysis',
       'Fraud Detection', 
       'Cost Savings', 
       'Dispute Resolution', 
       'Healthcare Management',
       'Risk Assessment',
       'Process Optimization',
-      'Team Leadership',
-      'Insurance Operations',
-      'Strategic Planning',
-      'Regulatory Compliance',
-      'Data Analysis'
+      'Team Leadership'
+      
     ]
   },
   leadershipApproach: {
