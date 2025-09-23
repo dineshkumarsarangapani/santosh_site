@@ -11,7 +11,7 @@ export const homeContent = {
     title: "Executive Summary",
     paragraphs: [
       "Accomplished healthcare executive with dual expertise in dental practice and insurance administration. MBA graduate from <strong>Birla Institute of Technology and Science, Pilani</strong> specialized in health systems strategic management with over 10+ years of progressive experience spanning clinical practice, medical administration, and insurance operations.",
-      "Currently serving as National Head of Investigation and Fraud Mitigation at <strong>Cholamandalam MS General Insurance</strong>, overseeing health, accident, and travel claims verification across India. Previously held increasingly responsible leadership positions at <strong>Star Health and Allied Insurance</strong>, culminating in Division Head role.",
+      "Served as National Head of Investigation and Fraud Mitigation at <strong>Cholamandalam MS General Insurance</strong>, overseeing health, accident, and travel claims verification across India. Previously held increasingly responsible leadership positions at <strong>Star Health and Allied Insurance</strong>, culminating in Division Head role.",
       "Holds Fellowship from the <strong>Insurance Institute of India</strong> with additional credentials in clinical research and pharmacovigilance from <strong>James Lind Institute</strong>. Pursuing further education in actuarial science through the <strong>Institute and Faculty of Actuaries</strong> to enhance analytical capabilities in risk assessment and financial modeling for insurance products.",
     ],
     keyAchievementsTitle: "Key Achievements:",
