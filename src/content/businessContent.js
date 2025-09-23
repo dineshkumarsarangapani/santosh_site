@@ -1,12 +1,13 @@
 export const businessContent = {
-  pageTitle: "Business & Health Administration",
-  pageDescription: "My professional experience and qualifications in healthcare management and business administration.",
+  pageTitle: "Insurance, Actuary & Business Administration",
+  pageDescription: "My professional experiences, Achievements and qualifications in Actuary, Insurance, Healthcare management & Business administration.",
   executiveProfile: {
     title: "Executive Profile",
     paragraphs: [
-      "Healthcare executive with over 10+ years of progressive experience in health insurance and healthcare administration. Currently serving as National Head of Investigation and Fraud Mitigation at Cholamandalam MS General Insurance, where I've successfully implemented AI-driven fraud detection systems reducing fraudulent claims by 28% and generating annual savings of ₹3.4 crore ($410,000 USD / £325,000).",
-      "My career journey from intern to division head at Star Health and Allied Insurance, one of India's premier health insurance providers, has equipped me with a comprehensive understanding of insurance operations across multiple departments. This progressive advancement allowed me to develop expertise in claims processing, provider network management, and operational leadership.",
-      "Having risen through the ranks at Star Health and Allied Insurance from intern to Division Head, I specialize in optimizing healthcare operations, improving claim settlement processes, and establishing provider networks. My dual expertise in dentistry and business administration provides a unique perspective on healthcare delivery and insurance operations, enabling me to bridge the gap between clinical practice and financial management."
+      "commencing the MSc Actuarial Management program at <strong>Bayes Business School, City, St. George’s University of London</strong>, starting September 2025."
+      "Insurance expert with over 10+ years of progressive experience in health insurance and healthcare administration. Served as National Head of Investigation and Fraud Mitigation at Cholamandalam MS General Insurance, where successfully implemented AI-driven fraud detection systems reducing fraudulent claims by 28%.",
+      "My career journey from trainee in Medical <strong>underwriting</strong> to division head at Star Health and Allied Insurance, one of India's premier health insurance providers, has equipped me with a comprehensive understanding of insurance operations across multiple departments. This progressive advancement allowed me to develop expertise in Underwriting, claims processing, provider network management, Pricing of hospitals and operational leadership.",
+      "Having risen through the ranks at Star Health and Allied Insurance from trainee to Division Head, I specialize in optimizing healthcare operations, improving claim settlement processes, and establishing provider networks. My dual expertise in dentistry and business administration provides a unique perspective on healthcare delivery and insurance operations, enabling me to bridge the gap between clinical practice and financial management."
     ]
   },
   keyAchievements: {
@@ -16,13 +17,13 @@ export const businessContent = {
         id: "biz-achieve-fraud",
         icon: "Security",
         title: "Fraud Detection Innovation",
-        description: "Led the implementation of an AI-based fraud detection system at Cholamandalam MS that analyzes claim patterns and provider behaviors to identify potential fraud. This initiative reduced fraudulent claims by 28% and saved approximately ₹3.4 crore ($410,000 USD / £325,000) annually, significantly improving the company's financial performance and establishing new benchmarks for risk mitigation."
+        description: "Instrumental in implementation of an AI-based fraud detection system at Cholamandalam MS that analyzes claim patterns and provider behaviors to identify potential fraud. This initiative reduced fraudulent claims by 28% and saved approximately ₹115 crore ($12.96 million USD/ £9.63 million GBP) in FY 23-24, and ₹145 crore ($16.33 million USD/ £12.15 million GBP) in FY 24-25, significantly improving the company's financial performance and establishing new benchmarks for risk mitigation."
       },
       {
         id: "biz-achieve-network",
         icon: "Lan",
         title: "Network Expansion",
-        description: "As Division Head at Star Health, led the strategic expansion of the provider network across South India, successfully onboarding 3000+ hospitals through targeted outreach and establishing standardized service agreements. This expansion improved geographical coverage for policyholders and enhanced claim settlement efficiency by 35%."
+        description: "As Division Head of Pricing of hospitals at Star Health, led the strategic expansion of the provider network across India, successfully onboarding 3000+ hospitals through targeted outreach and establishing standardized service agreements. This expansion improved geographical coverage for policyholders and enhanced claim settlement efficiency by 35% and increase in sales by minimum 40%"
       },
       {
         id: "biz-achieve-process",
@@ -42,18 +43,18 @@ export const businessContent = {
     title: "Core Competencies",
     skills: [
       'Medical Under writing',
+      'Hospital Pricing',
+      'Data Analysis',
+      'Risk Assessment',
       'Claim adjudication',
       'Insurance Operations',
       'Provider Management',
       'Strategic Planing',
-      'Hospital Pricing',
       'Regulatory Compliance',
-      'Data Analysis',
       'Fraud Detection', 
       'Cost Savings', 
       'Dispute Resolution', 
       'Healthcare Management',
-      'Risk Assessment',
       'Process Optimization',
       'Team Leadership'
       
@@ -81,7 +82,7 @@ export const businessContent = {
         role: "National Head - Investigation and Fraud Mitigation, Health Accident and Travel",
         duration: "March 2023 - Present | Chennai, Tamil Nadu, India",
         responsibilities: [
-          "Implemented AI-based fraud detection system, reducing fraudulent claims by 28% and saving ₹3.4 crore ($410,000 USD / £325,000) annually",
+          "Implementation & Utilization of AI-based fraud detection system, reducing fraudulent claims by 28% and saving ₹115 crore ($12.96 million USD/ £9.63 million GBP) in FY 23-24, and ₹145 crore ($16.33 million USD/ £12.15 million GBP) in FY 24-25",
           "Led a team of 25 professionals across 4 regional offices, overseeing health, accident, and travel claims verification and investigation processes nationwide.",
           "Developed corporate-wide fraud prevention strategy incorporating predictive analytics, resulting in 40% faster fraud identification and intervention.",
           "Collaborate extensively with legal, medical, and underwriting departments to establish robust, cross-functional verification protocols and policies.",
@@ -111,6 +112,7 @@ export const businessContent = {
             title: "Deputy Head Of Department",
             duration: "October 2020 - June 2022 (1 year 9 months)",
             responsibilities: [
+              "Developed and implemented an automated new claims processing workflow at <strong>Star Health and Allied Insurance Co Ltd</strong> in collaboration with <strong>Vitraya technologies</strong>, revolutionizing the approval process by reducing turnaround time from 4 hours to just 190 milliseconds while maintaining an impressive accuracy rate of 99.2%."
               "Developed, documented, and implemented standardized claims adjudication guidelines across multiple health insurance product lines (individual, group, specialized).",
               "Reduced claim dispute rates by 42% through proactive provider communication protocols and clarified policy interpretation workshops.",
               "Designed and conducted comprehensive training sessions for claims processors and medical reviewers, improving operational efficiency and adjudication consistency by 22%.",
@@ -132,7 +134,7 @@ export const businessContent = {
           },
           {
             id: "star-intern",
-            title: "Management Intern and Claims Processing",
+            title: "Trainee Medical underwriting & management and Claims Processing",
             duration: "September 2018 - February 2019 (6 months)",
             responsibilities: [
               "Conducted in-depth competitive analysis of prevailing health insurance products in the Indian market, presenting findings to the product development team.",
@@ -146,11 +148,10 @@ export const businessContent = {
       },
       {
         id: "exp-vidal",
-        company: "Vidal Healthcare",
+        company: "Vidal Health Insurance TPA (Third Party Administrator)",
         role: "Senior Medical Advisor",
         duration: "September 2017 - August 2018 (1 year)",
         responsibilities: [
-          "Developed and implemented an innovative healthcare pricing strategy that optimized reimbursement rates and reduced payment disputes by 40%.",
           "Served as the primary medical liaison between network medical providers and key insurance partners, fostering collaborative relationships.",
           "Evaluated complex medical necessity claims and appropriateness of treatments for high-value claim authorization, ensuring adherence to policy guidelines.",
           "Conducted thorough medical audits of network providers to ensure consistent compliance with service level agreements and quality standards.",
@@ -160,24 +161,6 @@ export const businessContent = {
       }
     ]
   },
-  industryCertifications: {
-    title: "Industry Certifications",
-    certs: [
-      {
-        id: "cert-fraud",
-        title: "Healthcare Fraud Investigation Certificate",
-        institution: "Association of Certified Fraud Examiners",
-        year: "2023",
-        description: "Specialized training in detecting and investigating complex healthcare claim fraud, including data analysis techniques, legal considerations, and emerging patterns in fraudulent activities."
-      },
-      {
-        id: "cert-analytics",
-        title: "Healthcare Analytics Professional",
-        institution: "International Institute for Analytics",
-        year: "2022",
-        description: "Advanced certification in healthcare data analytics, focusing on claim pattern analysis, predictive modeling for risk assessment, and deriving actionable insights from large healthcare datasets."
-      }
-    ]
   },
   strategicVision: {
     title: "Strategic Vision",
@@ -190,10 +173,19 @@ export const businessContent = {
     title: "Education & Certifications",
     credentials: [
       {
+        id: "Masters in Actuary",
+        institution: "BAYES BUSINESS SCHOOL, City St. Georges's University of London",
+        detail: "MSc Actuarial Management",
+        years: "(September 2025)",
+        description: [
+          "Specialising study in core practises of Actuary, risk and financial modelling techniques relevant to insurance risk assessment and reserving.",
+        ]
+      },
+      {
         id: "edu-actuaries",
         institution: "Institute and Faculty of Actuaries",
-        detail: "Business Finance and Business Economics",
-        years: "(July 2024 - July 2024)",
+        detail: "Actuarial Statistics, Business Finance and Business Economics",
+        years: "(July 2024 - April 2025)",
         description: [
           "Specialized study in core financial mathematics, probability, and advanced statistical modeling techniques relevant to insurance risk assessment and pricing.",
           "In-depth focus on micro and macroeconomic principles specifically applied to healthcare systems, insurance markets, and coverage determination strategies.",
