@@ -113,7 +113,7 @@ export const businessContent = {
             duration: "October 2020 - June 2022 (1 year 9 months)",
             responsibilities: [
               "Developed and implemented an automated new claims processing workflow at <strong>Star Health and Allied Insurance Co Ltd</strong> in collaboration with <strong>Vitraya technologies</strong>, revolutionizing the approval process by reducing turnaround time from 4 hours to just 190 milliseconds while maintaining an impressive accuracy rate of 99.2%.",
-              "Developed, documented, and implemented standardized claims adjudication guidelines across multiple health insurance product lines (individual, group, specialized)",
+              "Developed, documented, and implemented standardized claims adjudication guidelines across multiple health insurance product lines (individual, group, specialized).",
               "Reduced claim dispute rates by 42% through proactive provider communication protocols and clarified policy interpretation workshops.",
               "Designed and conducted comprehensive training sessions for claims processors and medical reviewers, improving operational efficiency and adjudication consistency by 22%.",
               "Assisted actively in the development and launch of new health insurance products, incorporating insights from claims data analysis and risk assessment.",
