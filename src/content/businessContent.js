@@ -4,7 +4,7 @@ export const businessContent = {
   executiveProfile: {
     title: "Executive Profile",
     paragraphs: [
-      "commencing the MSc Actuarial Management program at <strong>Bayes Business School, City, St. George’s University of London</strong>, starting September 2025."
+      "commencing the MSc Actuarial Management program at <strong>Bayes Business School, City, St. George’s University of London</strong>, starting September 2025.",
       "Insurance expert with over 10+ years of progressive experience in health insurance and healthcare administration. Served as National Head of Investigation and Fraud Mitigation at Cholamandalam MS General Insurance, where successfully implemented AI-driven fraud detection systems reducing fraudulent claims by 28%.",
       "My career journey from trainee in Medical <strong>underwriting</strong> to division head at Star Health and Allied Insurance, one of India's premier health insurance providers, has equipped me with a comprehensive understanding of insurance operations across multiple departments. This progressive advancement allowed me to develop expertise in Underwriting, claims processing, provider network management, Pricing of hospitals and operational leadership.",
       "Having risen through the ranks at Star Health and Allied Insurance from trainee to Division Head, I specialize in optimizing healthcare operations, improving claim settlement processes, and establishing provider networks. My dual expertise in dentistry and business administration provides a unique perspective on healthcare delivery and insurance operations, enabling me to bridge the gap between clinical practice and financial management."
@@ -112,8 +112,8 @@ export const businessContent = {
             title: "Deputy Head Of Department",
             duration: "October 2020 - June 2022 (1 year 9 months)",
             responsibilities: [
-              "Developed and implemented an automated new claims processing workflow at <strong>Star Health and Allied Insurance Co Ltd</strong> in collaboration with <strong>Vitraya technologies</strong>, revolutionizing the approval process by reducing turnaround time from 4 hours to just 190 milliseconds while maintaining an impressive accuracy rate of 99.2%."
-              "Developed, documented, and implemented standardized claims adjudication guidelines across multiple health insurance product lines (individual, group, specialized).",
+              "Developed and implemented an automated new claims processing workflow at <strong>Star Health and Allied Insurance Co Ltd</strong> in collaboration with <strong>Vitraya technologies</strong>, revolutionizing the approval process by reducing turnaround time from 4 hours to just 190 milliseconds while maintaining an impressive accuracy rate of 99.2%.",
+              "Developed, documented, and implemented standardized claims adjudication guidelines across multiple health insurance product lines (individual, group, specialized)",
               "Reduced claim dispute rates by 42% through proactive provider communication protocols and clarified policy interpretation workshops.",
               "Designed and conducted comprehensive training sessions for claims processors and medical reviewers, improving operational efficiency and adjudication consistency by 22%.",
               "Assisted actively in the development and launch of new health insurance products, incorporating insights from claims data analysis and risk assessment.",
@@ -160,7 +160,6 @@ export const businessContent = {
         ]
       }
     ]
-  },
   },
   strategicVision: {
     title: "Strategic Vision",
