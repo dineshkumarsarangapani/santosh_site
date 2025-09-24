@@ -2,25 +2,26 @@ export const homeContent = {
   profile: {
     name: "Dr. Santosh Kumar Sarangapani",
     title: "BDS, MBA, FIII.",
-    location: "Chennai, Tamil Nadu, India",
+    location: "Newington Green, London",
     avatarLetters: "DS",
     profileImagePath: "/santosh.png",
-    tags: ["Health Insurance Specialist", "Business & Data Analyst", "Risk Management", "Loss Mitigation", "Fraud Analytics", "Dentistry",  "Healthcare Management"],
+    tags: ["Health Insurance Specialist", "Business & Data Analyst", "Risk Management", "Loss Mitigation", "Fraud Analytics", "Dentistry", "Healthcare Management"],
   },
   summary: {
     title: "Executive Summary",
     paragraphs: [
-      "I am set to commence the MSc Actuarial Management program at <strong>Bayes Business School</strong>, <strong>City, St. George’s University of London</strong>, starting September 2025. This advanced qualification will deepen my expertise in quantitative risk analysis and insurance modeling.",
-      "<Strong>Professional Expertise</strong>: I bring over 10+ years of leadership experience in healthcare and insurance, combining clinical operational insight with strategic analytics. Most recently, I served as National Head of Investigation, Fraud Analytics, Abuse Management & Loss Mitigation at <strong>Cholamandalam Mitsui Sumitomo General Insurance Co. Ltd.</strong>, where I directed health, accident, and travel claims investigations across India, driving significant fraud reduction, Loss mitigation and operational efficiency. Prior to this, I held senior <strong>leadership roles at Star Health and Allied Insurance</strong>, culminating as a Division Head, where I led <strong>Provider (Hospitals) Management & Pricing of Hospitals, Labs and optimized claims IT infrastructure and underwriting workflows</strong>.",
-      "I hold a <strong>Fellowship from the Insurance Institute of India</strong>, with certifications across General, Health, and Life Insurance. I have successfully cleared <strong>CS1, CB1, and CB2 examinations from the Institute and Faculty of Actuaries (IFoA), UK, and CB3 from the Institute of Actuaries of India (IAI)</strong>. Currently, I am advancing my actuarial credentials by pursuing <strong>exemptions in CP1, CP2, CP3, SP1, and SP7</strong> through the IFoA, strengthening my capacity for data-driven risk modeling and product development.",
-      "I hold an <strong>MBA from Birla Institute of Technology and Science (BITS), Pilani</strong>, specializing in Health Systems Strategic Management. This background equips me with a holistic understanding of healthcare delivery, insurance systems, and strategic decision-making.",
-      "I am committed to leveraging this blend of clinical, managerial, and actuarial expertise to drive innovation and sustainable risk management in the evolving insurance landscape."
+      "<strong>Vision & Commitment:</strong> I am committed to leveraging this comprehensive blend of clinical, managerial, and actuarial expertise to drive innovation and sustainable risk management solutions in the rapidly evolving insurance landscape.",
+      "<strong>Current Academic Pursuit:</strong> I am currently pursuing the MSc Actuarial Management program at <strong>Bayes Business School, City, St. George's University of London</strong>, which commenced in September 2025. This advanced qualification is deepening my expertise in quantitative risk analysis and insurance modeling.",
+      "<strong>Professional Leadership:</strong> I bring over 10+ years of progressive leadership experience in healthcare and insurance, uniquely combining clinical operational insight with strategic analytics. Most recently, I served as <strong>National Head of Investigation, Fraud Analytics, Abuse Management & Loss Mitigation</strong> at <strong>Cholamandalam Mitsui Sumitomo General Insurance Co. Ltd.</strong>, where I directed comprehensive health, accident, and travel claims investigations across India, driving significant fraud reduction, loss mitigation, and operational efficiency improvements.",
+      "<strong>Strategic Experience:</strong> Prior to my current role, I held senior leadership positions at <strong>Star Health and Allied Insurance</strong>, culminating as a <strong>Division Head</strong>. In this capacity, I led Provider (Hospitals) Management & Pricing of Hospitals and Labs, while optimizing claims IT infrastructure and underwriting workflows to enhance operational excellence.",
+      "<strong>Professional Qualifications:</strong> I hold a <strong>Fellowship from the Insurance Institute of India</strong>, with comprehensive certifications across General, Health, and Life Insurance. I have successfully cleared <strong>CS1, CB1, and CB2 examinations from the Institute and Faculty of Actuaries (IFoA), UK, and CB3 from the Institute of Actuaries of India (IAI)</strong>. Currently, I am advancing my actuarial credentials by pursuing exemptions in <strong>CP1, CP2, CP3, SP1, and SP7</strong> through the IFoA.",
+      "<strong>Educational Foundation:</strong> I hold an <strong>MBA from Birla Institute of Technology and Science (BITS), Pilani</strong>, specializing in Health Systems Strategic Management. This foundation equips me with a holistic understanding of healthcare delivery, insurance systems, and strategic decision-making frameworks."
     ],
-    keyAchievementsTitle: "Key Achievements:",
+    keyAchievementsTitle: "Key Achievements",
     achievements: [
       {
         id: "AI-Powered Fraud Detection",
-        text: "Instrumental in implementation of an AI-driven fraud detection system at <strong>Cholamandalam Mitsui Sumitomo General Insurance</strong>, resulting in a 28% reduction in fraudulent claims and yielding significant cost savings of approximately <strong>₹115 crore ($12.96 million USD/ £9.63 million GBP)</strong> in FY 23-24, and <strong>₹145 crore ($16.33 million USD/ £12.15 million GBP)</strong> in FY 24-25",
+        text: "Instrumental in implementation of an AI-driven fraud detection system at <strong>Cholamandalam Mitsui Sumitomo General Insurance</strong>, resulting in a 28% reduction in fraudulent claims and yielding significant cost savings of approximately <strong>£9.63 million ($12.96 million USD)</strong> in FY 23-24, and <strong>£12.15 million ($16.33 million USD)</strong> in FY 24-25",
       },
       {
         id: "Network Expansion and Optimization",

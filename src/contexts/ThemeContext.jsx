@@ -11,121 +11,64 @@ export const useThemeContext = () => useContext(ThemeContext);
 const getDesignTokens = (mode) => ({
   palette: {
     mode,
-    ...(mode === 'light'
+    ...(mode === 'dark'
       ? {
-          // Light mode palette - Executive style
-          primary: {
-            main: '#0A192F', // Deep navy blue - corporate standard
-            light: '#172B4D',
-            dark: '#051126',
-          },
-          secondary: {
-            main: '#505F79', // Corporate slate gray
-          },
-          background: {
-            default: '#F5F6F8', // Very light gray
-            paper: '#FFFFFF',   // Pure white
-          },
-          text: {
-            primary: '#172B4D', // Dark navy for text
-            secondary: '#505F79', // Corporate gray
-          },
-        }
+        // Dark mode palette from the image
+        primary: {
+          main: '#4CAF50', // Green accent
+          contrastText: '#ffffff',
+        },
+        background: {
+          default: '#121212', // Off-black
+          paper: '#1E1E1E',   // Dark grey for surfaces
+        },
+        text: {
+          primary: '#FFFFFF',
+          secondary: '#B0B0B0',
+        },
+      }
       : {
-          // Dark mode palette - Updated to be truly dark
-          primary: {
-            main: '#2684FF', // Bright blue that stands out on dark
-            light: '#4C9AFF',
-            dark: '#0052CC',
-          },
-          secondary: {
-            main: '#9FB0CC', // Lighter blue-gray for dark mode
-          },
-          background: {
-            default: '#000000', // True black background
-            paper: '#121212',   // Very dark gray, almost black
-          },
-          text: {
-            primary: '#FFFFFF', // Pure white
-            secondary: '#B3BAC5', // Light gray with slight blue tint
-          },
-        }),
+        // Light mode palette (a professional light theme)
+        primary: {
+          main: '#4CAF50',
+          contrastText: '#ffffff',
+        },
+        background: {
+          default: '#F5F5F5',
+          paper: '#FFFFFF',
+        },
+        text: {
+          primary: '#212121',
+          secondary: '#757575',
+        },
+      }),
   },
   typography: {
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-    ].join(','),
-    h1: {
-      fontWeight: 600, // More impactful headers
-    },
-    h2: {
-      fontWeight: 600,
-    },
-    h3: {
-      fontWeight: 600,
-    },
-    h4: {
-      fontWeight: 500,
-    },
-    // More refined body text
-    body1: {
-      fontSize: '1rem',
-      lineHeight: 1.5,
-    },
+    fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+    h1: { fontWeight: 700 },
+    h2: { fontWeight: 700 },
+    h3: { fontWeight: 600 },
     button: {
-      textTransform: 'none', // Modern executive UIs avoid all-caps buttons
-      fontWeight: 500,
+      textTransform: 'none',
+      fontWeight: 600,
     },
   },
   components: {
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          borderRadius: 4,
-          boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)', // More subtle shadow
-        },
-      },
-    },
     MuiAppBar: {
       styleOverrides: {
-        root: {
-          boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.12)',
-        },
-      },
-    },
-    MuiContainer: {
-      styleOverrides: {
-        root: {
-          paddingTop: 24,
-          paddingBottom: 24,
-        },
-      },
-    },
-    MuiChip: {
-      styleOverrides: {
-        root: {
-          borderRadius: 3, // Less rounded for more corporate feel
-        },
+        root: ({ theme }) => ({
+          backgroundColor: theme.palette.background.paper,
+          color: theme.palette.text.primary,
+          boxShadow: 'none',
+          borderBottom: `1px solid ${theme.palette.divider}`,
+        }),
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 3, // Squared buttons are more corporate
-        },
-      },
-    },
-    // For dividers in cards
-    MuiDivider: {
-      styleOverrides: {
-        root: {
-          margin: '12px 0',
+          borderRadius: 8,
+          padding: '10px 20px',
         },
       },
     },
@@ -133,12 +76,18 @@ const getDesignTokens = (mode) => ({
 });
 
 export const ThemeProvider = ({ children }) => {
-  // Default to dark mode
-  const [mode, setMode] = useState('dark');
+  // Initialize theme from localStorage or default to dark mode
+  const [mode, setMode] = useState(() => {
+    const savedTheme = localStorage.getItem('theme-preference');
+    return savedTheme || 'dark';
+  });
 
-  // Toggle between light and dark, using useCallback to memoize the function
   const toggleColorMode = useCallback(() => {
-    setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+    setMode((prevMode) => {
+      const newMode = prevMode === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme-preference', newMode);
+      return newMode;
+    });
   }, []);
 
   // Memoize theme to prevent unnecessary re-renders
