@@ -28,7 +28,17 @@ function Education() {
                 {/* Current Academic Pursuit */}
                 <Paper elevation={3} sx={{ p: 5, mb: 6, borderRadius: 3, backgroundColor: theme.palette.background.default, position: 'relative', overflow: 'hidden', '&::before': { content: '""', position: 'absolute', top: 0, left: 0, width: '4px', height: '100%', backgroundColor: theme.palette.primary.main } }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                        <SchoolIcon color="primary" sx={{ mr: 2, fontSize: '2.5rem' }} />
+                        <Box sx={{ mr: 3, display: 'flex', alignItems: 'center' }}>
+                            <img
+                                src="/bayes-logo.svg"
+                                alt="Bayes Business School Logo"
+                                style={{
+                                    height: '60px',
+                                    width: 'auto',
+                                    filter: theme.palette.mode === 'dark' ? 'brightness(0) invert(1)' : 'none'
+                                }}
+                            />
+                        </Box>
                         <Typography variant="h4" component="h3" sx={{ fontWeight: 600, color: theme.palette.primary.main }}>
                             {education.current.title}
                         </Typography>
@@ -77,7 +87,32 @@ function Education() {
                                 }}
                             >
                                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                                    <WorkspacePremiumIcon color="primary" sx={{ mr: 2, fontSize: '2rem' }} />
+                                    {/* Show appropriate logo for each institution */}
+                                    {cred.institution.includes('Institute and Faculty of Actuaries') || cred.institution.includes('Insurance Institute of India') ? (
+                                        <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+                                            <img
+                                                src="/institute_of_actuaries_of_india.png"
+                                                alt="Institute of Actuaries of India Logo"
+                                                style={{
+                                                    height: '40px',
+                                                    width: 'auto'
+                                                }}
+                                            />
+                                        </Box>
+                                    ) : cred.institution.includes('James Lind Institute') ? (
+                                        <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+                                            <img
+                                                src="/james-lind-institute-logo.png"
+                                                alt="James Lind Institute Logo"
+                                                style={{
+                                                    height: '40px',
+                                                    width: 'auto'
+                                                }}
+                                            />
+                                        </Box>
+                                    ) : (
+                                        <WorkspacePremiumIcon color="primary" sx={{ mr: 2, fontSize: '2rem' }} />
+                                    )}
                                     <Typography variant="h6" component="h4" sx={{ fontWeight: 600 }}>
                                         {cred.institution}
                                     </Typography>
@@ -118,7 +153,21 @@ function Education() {
                                 }}
                             >
                                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                                    <MenuBookIcon color="primary" sx={{ mr: 2, fontSize: '2rem' }} />
+                                    {/* Show BITS Pilani logo for MBA */}
+                                    {degree.institution.includes('Birla Institute of Technology and Science') ? (
+                                        <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+                                            <img
+                                                src="/bits-pillani-2-1.webp"
+                                                alt="BITS Pilani Logo"
+                                                style={{
+                                                    height: '40px',
+                                                    width: 'auto'
+                                                }}
+                                            />
+                                        </Box>
+                                    ) : (
+                                        <MenuBookIcon color="primary" sx={{ mr: 2, fontSize: '2rem' }} />
+                                    )}
                                     <Typography variant="h5" component="h4" sx={{ fontWeight: 600 }}>
                                         {degree.institution}
                                     </Typography>

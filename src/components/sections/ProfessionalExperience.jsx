@@ -58,6 +58,44 @@ function ProfessionalExperience() {
                                     }}
                                 >
                                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                                        {/* Show company logos */}
+                                        {exp.company.includes('Cholamandalam MS') && (
+                                            <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+                                                <img
+                                                    src="/chola_ms.webp"
+                                                    alt="Cholamandalam MS General Insurance Logo"
+                                                    style={{
+                                                        height: '35px',
+                                                        width: 'auto'
+                                                    }}
+                                                />
+                                            </Box>
+                                        )}
+                                        {exp.company.includes('Star Health') && (
+                                            <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+                                                <img
+                                                    src="/star_health_new_logo_4a65bab316.svg"
+                                                    alt="Star Health and Allied Insurance Logo"
+                                                    style={{
+                                                        height: '35px',
+                                                        width: 'auto',
+                                                        filter: theme.palette.mode === 'dark' ? 'brightness(0) invert(1)' : 'none'
+                                                    }}
+                                                />
+                                            </Box>
+                                        )}
+                                        {exp.company.includes('Vidal Health') && (
+                                            <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+                                                <img
+                                                    src="/vidal_health.png"
+                                                    alt="Vidal Health Insurance TPA Logo"
+                                                    style={{
+                                                        height: '35px',
+                                                        width: 'auto'
+                                                    }}
+                                                />
+                                            </Box>
+                                        )}
                                         <Typography variant="h5" component="h4" sx={{ fontWeight: 600, mr: 2 }}>
                                             {exp.company}
                                         </Typography>
@@ -178,6 +216,44 @@ function ProfessionalExperience() {
                                     }}
                                 >
                                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                                        {/* Show company logos */}
+                                        {exp.company.includes('Cholamandalam MS') && (
+                                            <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+                                                <img
+                                                    src="/chola_ms.webp"
+                                                    alt="Cholamandalam MS General Insurance Logo"
+                                                    style={{
+                                                        height: '35px',
+                                                        width: 'auto'
+                                                    }}
+                                                />
+                                            </Box>
+                                        )}
+                                        {exp.company.includes('Star Health') && (
+                                            <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+                                                <img
+                                                    src="/star_health_new_logo_4a65bab316.svg"
+                                                    alt="Star Health and Allied Insurance Logo"
+                                                    style={{
+                                                        height: '35px',
+                                                        width: 'auto',
+                                                        filter: theme.palette.mode === 'dark' ? 'brightness(0) invert(1)' : 'none'
+                                                    }}
+                                                />
+                                            </Box>
+                                        )}
+                                        {exp.company.includes('Vidal Health') && (
+                                            <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+                                                <img
+                                                    src="/vidal_health.png"
+                                                    alt="Vidal Health Insurance TPA Logo"
+                                                    style={{
+                                                        height: '35px',
+                                                        width: 'auto'
+                                                    }}
+                                                />
+                                            </Box>
+                                        )}
                                         <Typography variant="h5" component="h4" sx={{ fontWeight: 600, mr: 2 }}>
                                             {exp.company}
                                         </Typography>
