@@ -103,16 +103,23 @@ export const professionalExperience = {
         subtitle: "Clinical practice and healthcare administration in dental settings",
         timeline: [
             {
-                id: "exp-santosh",
-                company: "Santosh Dental Clinic",
-                role: "Founder & Practitioner",
-                duration: "July 2015 - August 2016 (1 year 2 months)",
-                type: "Private Practice",
+                id: "exp-mother-dental",
+                company: "Mother Dental Care",
+                role: "Assistant Dental Surgeon",
+                duration: "November 2013 - August 2017 (3 years 10 months)",
+                location: "Chennai, Tamil Nadu, India",
+                type: "Full-time Clinical Practice",
                 responsibilities: [
-                    "Established and operated a private dental practice serving over 500 patients from diverse backgrounds",
-                    "Specialized in preventive dentistry and patient education with focus on long-term oral health",
-                    "Developed community outreach programs targeting underserved populations",
-                    "Implemented digital record keeping and appointment scheduling systems to improve operational efficiency"
+                    "Diagnosis and treatment planning for a wide range of dental conditions",
+                    "Radiographic diagnosis using intraoral and panoramic X-rays",
+                    "Preventive care such as oral hygiene instruction, fluoride application, and scaling",
+                    "Restorative dentistry, including composite and amalgam fillings",
+                    "Endodontic treatments (root canal therapy) for anterior and posterior teeth",
+                    "Preparation of tooth for Veneers, inlay, onlay, crowns with SS and ceramics",
+                    "Prosthodontic treatments, including complete and partial dentures",
+                    "Orthodontic treatments including removable appliances, habit breaking appliances and retainers with deep bite corrections",
+                    "Management of dental emergencies including Oro-facial trauma, fractures and acute pain",
+                    "Extractions, both simple and minor surgical removal of impacted tooth"
                 ]
             },
             {
@@ -125,18 +132,6 @@ export const professionalExperience = {
                     "Provided specialized dental consultations and treatment procedures for complex cases",
                     "Assisted in complex oral surgery cases with the senior medical team",
                     "Participated in multi-disciplinary treatment planning for comprehensive patient care"
-                ]
-            },
-            {
-                id: "exp-my-dentist",
-                company: "My Dentist Orthodontic Centre",
-                role: "Medical Administrator",
-                duration: "December 2014 - June 2015 (7 months)",
-                type: "Healthcare Administration",
-                responsibilities: [
-                    "Managed clinic operations and coordinated patient scheduling for a busy orthodontic practice",
-                    "Implemented efficient workflow procedures to improve patient care and reduce wait times",
-                    "Developed patient follow-up protocols that improved treatment compliance by 35%"
                 ]
             }
         ]
