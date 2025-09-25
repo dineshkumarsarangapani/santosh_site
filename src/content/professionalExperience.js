@@ -59,7 +59,7 @@ export const professionalExperience = {
                         title: "Manager",
                         duration: "April 2019 - September 2020 (1 year 6 months)",
                         responsibilities: [
-                            "Supervised and mentored a team of 12 claim processors, handling an average daily volume of 200+ claims while consistently meeting service level agreements.",
+                            "Supervised and mentored a team of 5 members, handling an average daily volume of 200+ claims analysis and 10+ hospital analysis while consistently meeting service level agreements.",
                             "Improved overall claim accuracy rate to 99.2% through the implementation of rigorous multi-stage review processes and targeted quality audits.",
                             "Identified and implemented key process improvements, including workflow automation steps, that reduced average claim processing time by 30%.",
                             "Collaborated directly with the IT department to design and deploy an automated flagging system for potentially fraudulent or high-risk claims.",
